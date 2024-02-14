@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jQuery Demo</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+
+    <script>
+        // When dociment is ready it will add this HTML code.
+        $(document).ready(function() {
+            $("html").append(
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Basic jQuery</h1>\
+                            <p id='1'>Paragraph 1</p>\
+                            <p id='2'>Paragraph 2</p>\
+                            <p id='3'>Paragraph 3</p>\
+                        </div>\
+                    </div>\
+                </body>"
+            );
+
+            // This will target the second paragraph and change the color to red.
+            $("#2").css({"color":"red"});
+
+            // This will add a click function to paragraph 3.
+            // When paragraph 3 is clicked it will hide the h1 header.
+            $("#3").click(function() {
+                $("h1").hide();
+            });
+        });
+    </script>
+
+</html>
